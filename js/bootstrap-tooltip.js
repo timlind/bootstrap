@@ -78,7 +78,7 @@
 
       return options
     }
-    
+
   , onenter: function(e) {
      this.enter(e.currentTarget)
   }
@@ -109,7 +109,7 @@
   , onleave: function(e) {
      this.leave(e.currentTarget)
   }
-  
+
   , leave: function (currentTarget) {
       currentTarget = currentTarget || this.$element[0]
       var self = $(currentTarget)[this.type](this._options).data(this.type)
@@ -133,8 +133,8 @@
         , placement
         , tp
         , e = $.Event('show')
-      
-      if (Tooltip.prev && Tooltip.prev !== this) Tooltip.prev.leave();
+
+      if (Tooltip.prev && Tooltip.prev !== this) Tooltip.prev.hide();
       Tooltip.prev = this
 
       if (this.hasContent() && this.enabled) {
